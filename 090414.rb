@@ -163,7 +163,7 @@ la página HTML:} +
 <pre>
     link rel="---" type="image/jpg" href="images/favicon.jpg"
 </pre>}
-  answer "icon"
+  answer /(shortcut\s+)?icon/i
   end
   #foot :'examples/footer.html'
   
