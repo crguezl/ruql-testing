@@ -59,7 +59,7 @@ ANÁLISIS SINTÁCTICO</h3>
           </div>
         </div>
       
-      <!-- Seed: 33415575261738185678293475309511224235 -->
+      <!-- Seed: 65132264530323924567392781216331961765 -->
 <form id="form">
   <ol class="questions">
     <li id="question-0" class="question fillin ">
@@ -77,6 +77,27 @@ la palabra que tiene longitud cero, formada por cero símbolos del conjunto base
 Una producción de la forma $A \rightarrow A \alpha$.
 se dice que es <input type=text id=qfi2-1 class=fillin></input> por la <input type=text id=qfi2-2 class=fillin></input>
 <div id=qfi2-2r class=quiz></div></br></br>      </div>
+    </li>
+    <li id="question-2" class="question fillin ">
+      <div class="quiz text">
+[1 point] 
+Rellene las partes que faltan de código CoffeeScript del 
+método que se encarga de reconocer el lenguaje generado
+por <tt>expression</tt>:
+<pre>
+  expression = ->
+    result = term()
+    while <input type=text id=qfi3-1 class=fillin></input> and <input type=text id=qfi3-2 class=fillin></input> is "ADDOP"
+      type = lookahead.value
+      match "ADDOP"
+      right = <input type=text id=qfi3-3 class=fillin></input>
+      result =
+        type: type
+        left: result
+        right: right
+    result
+</pre>
+<div id=qfi3-4r class=quiz></div></br></br>      </div>
     </li>
   </ol>
   <div class="btn-footer">
@@ -106,7 +127,7 @@ Reset    </button>
     <!--[if lt IE 8]>
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <![endif]-->
-    <script>      data = {"question-0":{"question_text":"\nDado un conjunto $A$, se define $A^*$ el cierre de Kleene de $A$ como:\n\\( A^* = \\cup_{n=1}^{\\infty} A^n \\)\nSe admite que $A^0 = { \\epsilon }$, donde $\\epsilon$ denota la\n--- ---, esto es\nla palabra que tiene longitud cero, formada por cero símbolos del conjunto base $A$.","answers":{"qfi1-1":{"answer_text":"/palabra/i","correct":true,"explanation":null,"type":"Regexp"},"qfi1-2":{"answer_text":"/vac[ií]a/","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-1":{"question_text":"\nUna producción de la forma $A \\rightarrow A \\alpha$.\nse dice que es --- por la ---\n","answers":{"qfi2-1":{"answer_text":"/recursiva/i","correct":true,"explanation":null,"type":"Regexp"},"qfi2-2":{"answer_text":"/izquierda/i","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""}};
+    <script>      data = {"question-0":{"question_text":"\nDado un conjunto $A$, se define $A^*$ el cierre de Kleene de $A$ como:\n\\( A^* = \\cup_{n=1}^{\\infty} A^n \\)\nSe admite que $A^0 = { \\epsilon }$, donde $\\epsilon$ denota la\n--- ---, esto es\nla palabra que tiene longitud cero, formada por cero símbolos del conjunto base $A$.","answers":{"qfi1-1":{"answer_text":"/palabra/i","correct":true,"explanation":null,"type":"Regexp"},"qfi1-2":{"answer_text":"/vac[ií]a/","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-1":{"question_text":"\nUna producción de la forma $A \\rightarrow A \\alpha$.\nse dice que es --- por la ---\n","answers":{"qfi2-1":{"answer_text":"/recursiva/i","correct":true,"explanation":null,"type":"Regexp"},"qfi2-2":{"answer_text":"/izquierda/i","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-2":{"question_text":"\nRellene las partes que faltan de código CoffeeScript del \nmétodo que se encarga de reconocer el lenguaje generado\npor <tt>expression</tt>:\n<pre>\n  expression = ->\n    result = term()\n    while --- and --- is \"ADDOP\"\n      type = lookahead.value\n      match \"ADDOP\"\n      right = ---\n      result =\n        type: type\n        left: result\n        right: right\n    result\n</pre>\n","answers":{"qfi3-1":{"answer_text":"lookahead","correct":true,"explanation":null,"type":"String"},"qfi3-2":{"answer_text":"lookahead.type","correct":true,"explanation":null,"type":"String"},"qfi3-3":{"answer_text":"term()","correct":true,"explanation":null,"type":"String"}},"points":1,"order":false,"question_comment":""}};
 
       function findCorrectAnswer(idQuestion, questionType) {
         correctIds = [];

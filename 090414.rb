@@ -21,6 +21,27 @@ se dice que es --- por la ---
     answer [/recursiva/i, /izquierda/i]
   end
 
+  fill_in do
+    text %q{
+Rellene las partes que faltan de código CoffeeScript del 
+método que se encarga de reconocer el lenguaje generado
+por <tt>expression</tt>:
+<pre>
+  expression = ->
+    result = term()
+    while --- and --- is "ADDOP"
+      type = lookahead.value
+      match "ADDOP"
+      right = ---
+      result =
+        type: type
+        left: result
+        right: right
+    result
+</pre>
+}
+  answer ["lookahead", "lookahead.type", "term()"]
+  end
   #foot :'examples/footer.html'
   
 end
