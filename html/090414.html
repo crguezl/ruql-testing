@@ -1,0 +1,423 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REPASO. 2ª PARTE. <br />
+ANÁLISIS SINTÁCTICO</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- -->
+    <style type="text/css" media="all">
+      div.quiz, p.comment, div.explanation {display:inline;}
+      strong.correct {color:#14B63F;}
+      strong.incorrect {color:rgb(255,0,0);}
+      strong.mark {color:rgb(255,128,0);}
+      input.correct {color:#14B63F; font-weight: bold;}
+      input.incorrect {color:rgb(255,0,0); font-weight: bold;}
+      div.custom-header {background-color:#7a3b7a; color:#FFFFFF; font-weight: bold;}
+      body {padding-top: 20px; padding-bottom: 20px; margin-bottom: 20px;}
+      html {position: relative; min-height: 100%;}
+      .navbar {margin-bottom: 20px;}
+      .btn-footer {text-align: center;}
+      #footer {
+        position: absolute;
+        bottom: 0;
+        height: 30px;
+        width: inherit;
+      }
+      div.container {background-color:#EAEAEA;}
+      p.comment, div.explanation {font-style: italic;}
+      .links {
+        display: inline; 
+        padding-right:5px;
+      }
+      a.links:hover {color: #FFCCFF;}
+    </style>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      
+        <div class="navbar navbar-default custom-header">
+          <div class="navbar-header">
+            <h3>REPASO. 2ª PARTE. <br />
+ANÁLISIS SINTÁCTICO</h3>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li>Asignatura: PROCESADORES DE LENGUAJES</li><br/>
+              <li>Curso: 3º</li><br/>
+              <li>
+                  Escuela T&eacute;cnica Superior de Ingenier&iacute;a Inform&aacute;tica
+                  </li><br/>
+              <li>Universidad de la Laguna </li>
+            </ul>
+          </div>
+        </div>
+      
+      <!-- Seed: 236606910724185425185934881287586196155 -->
+<form id="form">
+  <ol class="questions">
+    <li id="question-0" class="question fillin ">
+      <div class="quiz text">
+[1 point] 
+Dado un conjunto $A$, se define $A^*$ el cierre de Kleene de $A$ como:
+\( A^* = \cup_{n=1}^{\infty} A^n \)
+Se admite que $A^0 = { \epsilon }$, donde $\epsilon$ denota la
+<input type=text id=qfi1-1 class=fillin></input><input type=text id=qfi1-2 class=fillin></input>- <input type=text id=qfi1-3 class=fillin></input>--, esto es
+la palabra que tiene longitud cero, formada por cero símbolos del conjunto base $A$<div id=qfi1-4r class=quiz></div></br></br>      </div>
+    </li>
+    <li id="question-1" class="question fillin ">
+      <div class="quiz text">
+[1 point] 
+Una producción de la forma $A \rightarrow A \alpha$.
+se dice que es <input type=text id=qfi2-1 class=fillin></input><input type=text id=qfi2-2 class=fillin></input><input type=text id=qfi2-3 class=fillin></input><input type=text id=qfi2-4 class=fillin></input><input type=text id=qfi2-5 class=fillin></input><input type=text id=qfi2-6 class=fillin></input><input type=text id=qfi2-7 class=fillin></input><input type=text id=qfi2-8 class=fillin></input>--
+<div id=qfi2-9r class=quiz></div></br></br>      </div>
+    </li>
+  </ol>
+  <div class="btn-footer">
+    <button type="button" id="submit" class="btn btn-primary">
+Submit    </button>
+    <button type="button" id="reset" class="btn btn-warning">
+Reset    </button>
+  </div>
+</form>
+
+      
+        <div id="footer">
+          <div class="row text-muted">
+            <div class="col-md-6">
+              Quiz generated using the RuQL Gem. For more information, visit <a href="https://github.com/jjlabrador/ruql">GitHub
+              <span class="glyphicon glyphicon-link"></span></a>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+              Universidad de La Laguna 2014
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <!--[if lt IE 8]>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <![endif]-->
+    <script>      data = {"question-0":{"question_text":"\nDado un conjunto $A$, se define $A^*$ el cierre de Kleene de $A$ como:\n\\( A^* = \\cup_{n=1}^{\\infty} A^n \\)\nSe admite que $A^0 = { \\epsilon }$, donde $\\epsilon$ denota la\n------- -----, esto es\nla palabra que tiene longitud cero, formada por cero símbolos del conjunto base $A$.","answers":{"qfi1-1":{"answer_text":"/palabra/i","correct":true,"explanation":null,"type":"Regexp"},"qfi1-2":{"answer_text":"/vac[ií]a/","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-1":{"question_text":"\nUna producción de la forma $A \\rightarrow A \\alpha$.\nse dice que es --------------------------\n","answers":{"qfi2-1":{"answer_text":"/recursiva\\s+(por\\s+la)?\\s+izquierda/i","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""}};
+
+      function findCorrectAnswer(idQuestion, questionType) {
+        correctIds = [];
+        for (id in data[idQuestion]['answers']) {
+          if(data[idQuestion]['answers'][id.toString()]['correct'] == true)
+            if (questionType == 0)
+              return id.toString();
+            else {
+              correctIds.push(id.toString());
+            } 
+        }
+        return correctIds;
+      }
+      
+      function checkSelectMultiple(x, checkedIds, correctIds) {
+        results = [];
+        
+        $.each(checkedIds, function(index, value){
+          if (correctIds.indexOf(value) == -1) {
+            results.push(false);
+            printResults(value, 0, data[x.toString()]['answers'][value]['explanation'], 0);
+          }
+          else {
+            results.push(true);
+            printResults(value, 1, data[x.toString()]['answers'][value]['explanation'], 0);
+          }
+        });
+        
+        nCorrects = 0;
+        nIncorrects = 0;
+        $.each(results, function(index, value){
+          if (value == true)
+            nCorrects += 1;
+          else
+            nIncorrects += 1;
+        });
+        
+        calculateMark(data[x.toString()], x.toString(), null, 3, nCorrects, nIncorrects);
+      }
+      
+      function printResults(id, type, explanation, typeQuestion) {
+        if (typeQuestion == 0) {                                        // MultipleChoice and SelectMultiple
+          $("br[class=" + id + "br" + "]").detach();
+          if (type == 1) {
+            if ((explanation == "") || (explanation == null))
+              $("div[id ~= " + id + "r" + "]").html("<strong class=correct> Correct</strong></br>");
+            else
+              $("div[id ~= " + id + "r" + "]").html("<strong class=correct> Correct - " + explanation + "</strong></br>");
+          }
+          else {
+            if ((explanation == "") || (explanation == null))
+              $("div[id ~= " + id + "r" + "]").html("<strong class=incorrect> Incorrect</strong></br>");
+            else
+              $("div[id ~= " + id + "r" + "]").html("<strong class=incorrect> Incorrect - " + explanation + "</strong></br>");
+          }
+        }
+        else {          // FillIn
+          for (r in id) {
+            input = $("#" + r.toString());
+            if (id[r] == true)
+              input.attr('class', 'fillin correct');
+            else { 
+              if ((id[r] == false) || (id[r] != "n/a"))
+                input.attr('class', 'fillin incorrect');
+            }
+            
+            if ((id[r] != true) && (id[r] != false) && (id[r] != "n/a")) {
+              if (explanation[id[r].toString()] != null)
+                $("div[id ~= " + r.toString() + "r" + "]").html(" <div class=explanation>" + explanation[id[r].toString()] + "</div>");
+            }
+            else {
+              if (explanation[r] != null)
+                $("div[id ~= " + r + "r" + "]").html(" <div class=explanation>" + explanation[r] + "</div>");
+            }
+          }
+        }
+      }
+      
+      function calculateMark(question, id, result, typeQuestion, numberCorrects, numberIncorrects) {
+        if (typeQuestion == 2) {
+          if (result)
+            $("#" + id).append("<strong class=mark> " + question['points'].toFixed(2) + "/" + question['points'].toFixed(2) + " points</strong></br></br>");
+          else
+            $("#" + id).append("<strong class=mark> 0.00/" + question['points'].toFixed(2) + " points</strong></br></br>");
+        }
+        else if (typeQuestion == 1) {
+          size = 0;
+          for (y in question['answers'])
+            if (question['answers'][y]['correct'] == true)
+              size += 1;
+          
+          $("#" + id).append("<strong class=mark> " + ((question['points'] / size) * numberCorrects).toFixed(2) + "/" + question['points'].toFixed(2) + " points</strong></br></br>");
+        }
+        else {
+          totalCorrects = 0;
+          for (y in question['answers']) {
+            if (question['answers'][y]['correct'] == true)
+              totalCorrects += 1;
+          }
+          
+          correctAnswerPoints = question['points'] / totalCorrects;
+          penalty = correctAnswerPoints * numberIncorrects;
+          mark = (correctAnswerPoints * numberCorrects) - penalty;
+          
+          if (mark < 0)
+            mark = 0;
+            
+          $("#" + id).append("<strong class=mark> " + mark.toFixed(2) + "/" + question['points'].toFixed(2) + " points</strong></br></br>");        
+        }
+      }
+      
+      function checkFillin(correctAnswers, userAnswers, distractorAnswers, typeCorrection) {
+        correction = {};
+        checkedAnswers = {};
+        
+        if (typeCorrection == 0) {          // Order doesn't matter
+          for (u in userAnswers) {
+            if (userAnswers[u] != undefined) {    // No empty field
+              matchedCorrect = false;
+              for (y in correctAnswers) {
+                if (checkAnswers[u] == undefined) {
+                  if ((typeof(correctAnswers[y]) == "string") || (typeof(correctAnswers[y]) == "number")) {    // Answer is a String or a Number
+                    if (userAnswers[u] == correctAnswers[y]) {
+                      correction[u] = true;
+                      checkedAnswers[u] = userAnswers[u];
+                      matchedCorrect = true;
+                      break;
+                    }
+                  }
+                  else {  // Answer is a Regexp
+                    if (userAnswers[u].match(correctAnswers[y])) {
+                      correction[u] = true;
+                      checkedAnswers[u] = userAnswers[u];
+                      matchedCorrect = true;
+                      break;
+                    }
+                  }
+                }
+              }
+              if (!matchedCorrect)
+                correction[u] = false;
+            }
+            else
+              correction[u] = "n/a";
+          }
+        }
+        else {                            // Order matters
+          for (u in userAnswers) {
+            if (userAnswers[u] != undefined) {
+              if ((typeof(correctAnswers[u]) == "string") || (typeof(correctAnswers[u]) == "number")) {
+                if (userAnswers[u] == correctAnswers[u])
+                  correction[u] = true;
+                else
+                  correction[u] = false;
+              }
+              else {
+                if (userAnswers[u].match(correctAnswers[u]))
+                  correction[u] = true;
+                else
+                  correction[u] = false;
+              }
+            }
+            else
+              correction[u] = "n/a";
+          }
+        }
+        
+        if (Object.keys(userAnswers).length == 1) {
+          for (u in userAnswers) {
+            if (correction[u] == false) {
+              for (y in distractorAnswers) {
+                if ((typeof(distractorAnswers[y]) == "string") || (typeof(distractorAnswers[y]) == "number")) {
+                  if (userAnswers[u] == distractorAnswers[y])
+                    correction[u] = y.toString();
+                }
+                else {
+                  if (userAnswers[u].match(distractorAnswers[y]))
+                    correction[u] = y.toString();
+                }
+              }
+            }
+          }
+        }
+        return correction;
+      }
+      
+      function checkAnswers() {
+        
+        for (x in data) {
+          if ($("#" + x.toString() + " strong").length == 0) {
+            correct = false;
+            answers = $("#" + x.toString() + " input");
+            
+            if (answers.attr('class') == "fillin") {
+              correctAnswers = {};
+              distractorAnswers = {};
+              explanation = {};
+              stringAnswer = false;
+              
+              for (ans in data[x.toString()]['answers']) {
+                if (data[x.toString()]['answers'][ans]['correct'] == true) {
+                  if (data[x.toString()]['answers'][ans]['type'] == "Regexp") {
+                    string = data[x.toString()]['answers'][ans]['answer_text'].split('/');
+                    regexp = string[1];
+                    options = string[2];
+                    correctAnswers[ans.toString()] = RegExp(regexp, options);
+                  }
+                  else { // String or Number
+                    correctAnswers[ans.toString()] = data[x.toString()]['answers'][ans]['answer_text'];
+                    stringAnswer = true;
+                  }
+                }
+                else {
+                  if (data[x.toString()]['answers'][ans]['type'] == "Regexp") {
+                    string = data[x.toString()]['answers'][ans]['answer_text'].split('/');
+                    regexp = string[1];
+                    options = string[2];
+                    distractorAnswers[ans.toString()] = RegExp(regexp, options);
+                  }
+                  else {// String or Number
+                    distractorAnswers[ans.toString()] = data[x.toString()]['answers'][ans]['answer_text'];
+                    stringAnswer = true;
+                  }
+                }
+                explanation[ans] = data[x.toString()]['answers'][ans]['explanation'];
+              }
+              
+              userAnswers = {};
+              for (i = 0; i < answers.length; i++) {
+                if (answers[i].value == '')
+                  userAnswers[answers[i].id.toString()] = undefined;
+                else
+                  if (stringAnswer)
+                    userAnswers[answers[i].id.toString()] = answers[i].value.toLowerCase();
+                  else
+                    userAnswers[answers[i].id.toString()] = answers[i].value;
+              }
+              
+              if (data[x.toString()]['order'] == false)
+                results = checkFillin(correctAnswers, userAnswers, distractorAnswers, 0);
+              else
+                results = checkFillin(correctAnswers, userAnswers, distractorAnswers, 1);
+                
+              allEmpty = true;
+              nCorrects = 0;
+              
+              for (r in results) {
+                if (results[r] == true)
+                  nCorrects += 1;
+                if (results[r] != "n/a")
+                  allEmpty = false;
+              }
+              
+              if (!allEmpty) {
+                printResults(results, null, explanation, 1);
+                calculateMark(data[x.toString()], x.toString(), null, 1, nCorrects, null);
+              }
+            }
+            
+            else if (answers.attr('class') == "select") {
+              idCorrectAnswer = findCorrectAnswer(x.toString(), 0);
+              
+              if ($("#" + x.toString() + " :checked").size() != 0) {
+                if ($("#" + x.toString() + " :checked").attr('id') == idCorrectAnswer) {
+                  printResults($("#" + x.toString() + " :checked").attr('id'), 1, "", 0);
+                  correct = true;
+                }
+                else {
+                  id = $("#" + x.toString() + " :checked").attr('id');
+                  printResults(id, 0, data[x.toString()]['answers'][id]['explanation'], 0);
+                }
+                calculateMark(data[x.toString()], x.toString(), correct, 2, null, null);
+              }
+            }
+            
+            else {
+              if ($("#" + x.toString() + " :checked").size() != 0) {
+                answers = $("#" + x.toString() + " :checked");
+                checkedIds = [];
+                
+                $.each(answers, function(index, value){
+                  checkedIds.push(value['id']);
+                });
+                
+                correctIds = [];
+                correctIds = findCorrectAnswer(x.toString(), 1);
+                checkSelectMultiple(x, checkedIds, correctIds);
+              }
+            }
+          }
+        }
+      }
+
+      $("#submit").click(function() {
+        checkAnswers();
+        filledAllQuiz = true;
+        
+        for (x in data) {
+          if ($("#" + x.toString() + " strong").length == 0)
+            filledAllQuiz = false; 
+        }
+        if (filledAllQuiz)
+          $("#submit").detach();
+      });
+
+      $("#reset").click(function() {
+        window.location.reload();
+      });
+</script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!-- -->
+  </body>
+</html>
