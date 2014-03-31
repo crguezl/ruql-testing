@@ -26,18 +26,20 @@ se dice que es --- por la ---
 Recuerde el <b>analizador sintáctico descendente predictivo recursivo</b> 
 para la <a id="grammar">gramática</a>:<br/>
 <ul>
-  <li> $\Sigma = \{ ; =, ID, P, +, *, (, ), NUM \}$, 
-  <li> $V = \{ statements, statement, expression, term, factor \}$
+  <li> $\Sigma = \{ ; =, ID, P, ADDOP, MULOP, COMPARISON, (, ), NUM \}$, 
+  <li> $V = \{ statements, statement, condition, expression, term, factor \}$
   <li> Productions:
   <ol>
     <li>
     statements  $ \rightarrow$ statement ';' statements  $\vert$ statement
     <li>
     statement  $ \rightarrow$ ID '=' expression  $\vert$ P expression
+ $ \vert$ IF condition THEN statement·
+    <li> condition $ \rightarrow$ expression COMPARISON expression
     <li>
-    expression  $ \rightarrow$ term '+' expression  $\vert$ term
+    expression  $ \rightarrow$ term ADDOP expression  $\vert$ term
     <li>
-    term  $ \rightarrow$ factor '*' term  $\vert$ factor
+    term  $ \rightarrow$ factor MULOP term  $\vert$ factor
     <li>
     factor  $ \rightarrow$ '(' expression ')' $\vert$ ID $ \vert$ NUM
   </ol>
@@ -54,13 +56,13 @@ por <tt>expression</tt>:
       match "ADDOP"
       right = ---
       result =
-        type: type
+        type: ---
         left: result
         right: right
     result
 </pre>
 }
-  answer ["lookahead", "lookahead.type", "term()"]
+  answer ["lookahead", "lookahead.type", "term()", "type"]
   end
 
   fill_in do
@@ -131,6 +133,26 @@ definida anteriormente</a>:
   /left/,                 #16
   /right/                 #17
   ]
+  end
+
+  fill_in do
+    text <<-'CONDITION'
+Rellene las partes que faltan del código CoffeeScript
+que reconoce el sublenguaje generado por <i>condition</i>:
+  <pre>
+  condition = ->
+    left = ---()
+    type = ---.---
+    match "COMPARISON"
+    right = ---()
+    result =
+      type: type
+      left: left
+      right: right
+    result
+  </pre>
+CONDITION
+   answer ['expression', 'lookahead', 'value', 'expression']
   end
 
   fill_in do
