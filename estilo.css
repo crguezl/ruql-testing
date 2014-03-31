@@ -1,0 +1,4 @@
+body {
+  background: lightblue;
+}
+.instructions { clear: both; border: 5px solid black; align: left; padding: 2ex; margin: 2ex; }

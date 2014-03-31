@@ -1,0 +1,20 @@
+GIT
+  remote: git@github.com:jjlabrador/ruql.git
+  revision: 538a14eb2a8f2bb9e98dd6c51d79e2a2650e7b86
+  branch: develop
+  specs:
+    ruql (0.0.2)
+      builder
+      getopt
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    builder (3.2.2)
+    getopt (1.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ruql!
