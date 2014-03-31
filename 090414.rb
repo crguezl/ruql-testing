@@ -8,7 +8,7 @@ ANÁLISIS SINTÁCTICO} do
 Dado un conjunto $A$, se define $A^*$ el cierre de Kleene de $A$ como:
 \( A^* = \cup_{n=1}^{\infty} A^n \)
 Se admite que $A^0 = \{ \epsilon \}$, donde $\epsilon$ denota la
-------- -----, esto es
+--- ---, esto es
 la palabra que tiene longitud cero, formada por cero símbolos del conjunto base $A$.}
     answer [/palabra/i, /vac[ií]a/i]
   end
@@ -16,9 +16,9 @@ la palabra que tiene longitud cero, formada por cero símbolos del conjunto base
   fill_in do
     text %q{
 Una producción de la forma $A \rightarrow A \alpha$.
-se dice que es --------------------------
+se dice que es --- por la ---
 }
-    answer /recursiva\s+(por\s+la)?\s+izquierda/i
+    answer [/recursiva/i, /izquierda/i]
   end
 
   #foot :'examples/footer.html'
