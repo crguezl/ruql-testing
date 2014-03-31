@@ -112,11 +112,25 @@ definida anteriormente</a>:
     };
 </pre>
 }
-  answer ["lookahead", 
-  "lookahead.type", 
-  "ID",
-  "lookahead",
-  "term()"]
+  answer [
+  "lookahead",           #1
+  "lookahead.type",      #2
+  "ID",                  #3
+  "lookahead",           #4
+  "expression",          #5
+  "lookahead",           #6
+  "lookahead",           #7
+  "type",                #8
+  "right",               #9
+  "lookahead",           #10
+  "lookahead",           #11
+  "type",                #12
+  "IF",                  #13
+  /expression|condition/, #14
+  /statement/,            #15
+  /left/,                 #16
+  /right/                 #17
+  ]
   end
 
   fill_in do
