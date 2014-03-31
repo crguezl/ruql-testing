@@ -59,7 +59,7 @@ ANÁLISIS SINTÁCTICO</h3>
           </div>
         </div>
       
-      <!-- Seed: 65132264530323924567392781216331961765 -->
+      <!-- Seed: 309602592212044952674154185860335454966 -->
 <form id="form">
   <ol class="questions">
     <li id="question-0" class="question fillin ">
@@ -81,6 +81,26 @@ se dice que es <input type=text id=qfi2-1 class=fillin></input> por la <input ty
     <li id="question-2" class="question fillin ">
       <div class="quiz text">
 [1 point] 
+Recuerde el <b>analizador sintáctico descendente predictivo recursivo</b> 
+para la <a id="grammar">gramática</a>:<br/>
+<ul>
+  <li> $\Sigma = { ; =, ID, P, +, *, (, ), NUM }$, 
+  <li> $V = { statements, statement, expression, term, factor }$
+  <li> Productions:
+  <ol>
+    <li>
+    statements  $ \rightarrow$ statement ';' statements  $\vert$ statement
+    <li>
+    statement  $ \rightarrow$ ID '=' expression  $\vert$ P expression
+    <li>
+    expression  $ \rightarrow$ term '+' expression  $\vert$ term
+    <li>
+    term  $ \rightarrow$ factor '*' term  $\vert$ factor
+    <li>
+    factor  $ \rightarrow$ '(' expression ')' $\vert$ ID $ \vert$ NUM
+  </ol>
+  <li> Start symbol: $statements$
+</ul>
 Rellene las partes que faltan de código CoffeeScript del 
 método que se encarga de reconocer el lenguaje generado
 por <tt>expression</tt>:
@@ -98,6 +118,66 @@ por <tt>expression</tt>:
     result
 </pre>
 <div id=qfi3-4r class=quiz></div></br></br>      </div>
+    </li>
+    <li id="question-3" class="question fillin ">
+      <div class="quiz text">
+[1 point] 
+Rellene las partes que faltan de código CoffeeScript del 
+método que se encarga de reconocer el lenguaje generado
+por <tt>statement</tt> para la <a href="#grammar">gramática
+definida anteriormente</a>:
+<pre>
+    statement = function() {
+      var left, result, right;
+      result = null;
+      if (<input type=text id=qfi4-1 class=fillin></input> && <input type=text id=qfi4-2 class=fillin></input> === "ID") {
+        left = {
+          type: "<input type=text id=qfi4-3 class=fillin></input>",
+          value: <input type=text id=qfi4-4 class=fillin></input>.value
+        };
+        match("ID");
+        match("=");
+        right = <input type=text id=qfi4-5 class=fillin></input>();
+        result = {
+          type: "=",
+          left: left,
+          right: right
+        };
+      } else if (<input type=text id=qfi4-6 class=fillin></input> && <input type=text id=qfi4-7 class=fillin></input>.<input type=text id=qfi4-8 class=fillin></input> === "P") {
+        match("P");
+        right = expression();
+        result = {
+          type: "P",
+          value: <input type=text id=qfi4-9 class=fillin></input>
+        };
+      } else if (<input type=text id=qfi4-10 class=fillin></input> && <input type=text id=qfi4-11 class=fillin></input>.<input type=text id=qfi4-12 class=fillin></input> === "IF") {
+        match("<input type=text id=qfi4-13 class=fillin></input>");
+        left = <input type=text id=qfi4-14 class=fillin></input>;
+        match("THEN");
+        right = <input type=text id=qfi4-15 class=fillin></input>;
+        result = {
+          type: "IF",
+          left: <input type=text id=qfi4-16 class=fillin></input>,
+          right: <input type=text id=qfi4-17 class=fillin></input>
+        };
+      } else {
+        throw "Syntax Error. Expected identifier but found " + 
+         (lookahead ? lookahead.value : "end of input") + 
+         (" near '" + (input.substr(lookahead.from)) + "'");
+      }
+      return result;
+    };
+</pre>
+<div id=qfi4-18r class=quiz></div></br></br>      </div>
+    </li>
+    <li id="question-4" class="question fillin ">
+      <div class="quiz text">
+[1 point] 
+Complete este fragmento de <tt>slim</tt> que establece el favicon de 
+la página HTML:
+<pre>
+    link rel="<input type=text id=qfi5-1 class=fillin></input>" type="image/jpg" href="images/favicon.jpg"
+</pre><div id=qfi5-2r class=quiz></div></br></br>      </div>
     </li>
   </ol>
   <div class="btn-footer">
@@ -127,7 +207,7 @@ Reset    </button>
     <!--[if lt IE 8]>
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <![endif]-->
-    <script>      data = {"question-0":{"question_text":"\nDado un conjunto $A$, se define $A^*$ el cierre de Kleene de $A$ como:\n\\( A^* = \\cup_{n=1}^{\\infty} A^n \\)\nSe admite que $A^0 = { \\epsilon }$, donde $\\epsilon$ denota la\n--- ---, esto es\nla palabra que tiene longitud cero, formada por cero símbolos del conjunto base $A$.","answers":{"qfi1-1":{"answer_text":"/palabra/i","correct":true,"explanation":null,"type":"Regexp"},"qfi1-2":{"answer_text":"/vac[ií]a/","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-1":{"question_text":"\nUna producción de la forma $A \\rightarrow A \\alpha$.\nse dice que es --- por la ---\n","answers":{"qfi2-1":{"answer_text":"/recursiva/i","correct":true,"explanation":null,"type":"Regexp"},"qfi2-2":{"answer_text":"/izquierda/i","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-2":{"question_text":"\nRellene las partes que faltan de código CoffeeScript del \nmétodo que se encarga de reconocer el lenguaje generado\npor <tt>expression</tt>:\n<pre>\n  expression = ->\n    result = term()\n    while --- and --- is \"ADDOP\"\n      type = lookahead.value\n      match \"ADDOP\"\n      right = ---\n      result =\n        type: type\n        left: result\n        right: right\n    result\n</pre>\n","answers":{"qfi3-1":{"answer_text":"lookahead","correct":true,"explanation":null,"type":"String"},"qfi3-2":{"answer_text":"lookahead.type","correct":true,"explanation":null,"type":"String"},"qfi3-3":{"answer_text":"term()","correct":true,"explanation":null,"type":"String"}},"points":1,"order":false,"question_comment":""}};
+    <script>      data = {"question-0":{"question_text":"\nDado un conjunto $A$, se define $A^*$ el cierre de Kleene de $A$ como:\n\\( A^* = \\cup_{n=1}^{\\infty} A^n \\)\nSe admite que $A^0 = { \\epsilon }$, donde $\\epsilon$ denota la\n--- ---, esto es\nla palabra que tiene longitud cero, formada por cero símbolos del conjunto base $A$.","answers":{"qfi1-1":{"answer_text":"/palabra/i","correct":true,"explanation":null,"type":"Regexp"},"qfi1-2":{"answer_text":"/vac[ií]a/","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-1":{"question_text":"\nUna producción de la forma $A \\rightarrow A \\alpha$.\nse dice que es --- por la ---\n","answers":{"qfi2-1":{"answer_text":"/recursiva/i","correct":true,"explanation":null,"type":"Regexp"},"qfi2-2":{"answer_text":"/izquierda/i","correct":true,"explanation":null,"type":"Regexp"}},"points":1,"order":false,"question_comment":""},"question-2":{"question_text":"\nRecuerde el <b>analizador sintáctico descendente predictivo recursivo</b> \npara la <a id=\"grammar\">gramática</a>:<br/>\n<ul>\n  <li> $\\Sigma = { ; =, ID, P, +, *, (, ), NUM }$, \n  <li> $V = { statements, statement, expression, term, factor }$\n  <li> Productions:\n  <ol>\n    <li>\n    statements  $ \\rightarrow$ statement ';' statements  $\\vert$ statement\n    <li>\n    statement  $ \\rightarrow$ ID '=' expression  $\\vert$ P expression\n    <li>\n    expression  $ \\rightarrow$ term '+' expression  $\\vert$ term\n    <li>\n    term  $ \\rightarrow$ factor '*' term  $\\vert$ factor\n    <li>\n    factor  $ \\rightarrow$ '(' expression ')' $\\vert$ ID $ \\vert$ NUM\n  </ol>\n  <li> Start symbol: $statements$\n</ul>\nRellene las partes que faltan de código CoffeeScript del \nmétodo que se encarga de reconocer el lenguaje generado\npor <tt>expression</tt>:\n<pre>\n  expression = ->\n    result = term()\n    while --- and --- is \"ADDOP\"\n      type = lookahead.value\n      match \"ADDOP\"\n      right = ---\n      result =\n        type: type\n        left: result\n        right: right\n    result\n</pre>\n","answers":{"qfi3-1":{"answer_text":"lookahead","correct":true,"explanation":null,"type":"String"},"qfi3-2":{"answer_text":"lookahead.type","correct":true,"explanation":null,"type":"String"},"qfi3-3":{"answer_text":"term()","correct":true,"explanation":null,"type":"String"}},"points":1,"order":false,"question_comment":""},"question-3":{"question_text":"\nRellene las partes que faltan de código CoffeeScript del \nmétodo que se encarga de reconocer el lenguaje generado\npor <tt>statement</tt> para la <a href=\"#grammar\">gramática\ndefinida anteriormente</a>:\n<pre>\n    statement = function() {\n      var left, result, right;\n      result = null;\n      if (--- && --- === \"ID\") {\n        left = {\n          type: \"---\",\n          value: ---.value\n        };\n        match(\"ID\");\n        match(\"=\");\n        right = ---();\n        result = {\n          type: \"=\",\n          left: left,\n          right: right\n        };\n      } else if (--- && ---.--- === \"P\") {\n        match(\"P\");\n        right = expression();\n        result = {\n          type: \"P\",\n          value: ---\n        };\n      } else if (--- && ---.--- === \"IF\") {\n        match(\"---\");\n        left = ---;\n        match(\"THEN\");\n        right = ---;\n        result = {\n          type: \"IF\",\n          left: ---,\n          right: ---\n        };\n      } else {\n        throw \"Syntax Error. Expected identifier but found \" + \n         (lookahead ? lookahead.value : \"end of input\") + \n         (\" near '\" + (input.substr(lookahead.from)) + \"'\");\n      }\n      return result;\n    };\n</pre>\n","answers":{"qfi4-1":{"answer_text":"lookahead","correct":true,"explanation":null,"type":"String"},"qfi4-2":{"answer_text":"lookahead.type","correct":true,"explanation":null,"type":"String"},"qfi4-3":{"answer_text":"id","correct":true,"explanation":null,"type":"String"},"qfi4-4":{"answer_text":"lookahead","correct":true,"explanation":null,"type":"String"},"qfi4-5":{"answer_text":"term()","correct":true,"explanation":null,"type":"String"}},"points":1,"order":false,"question_comment":""},"question-4":{"question_text":"\nComplete este fragmento de <tt>slim</tt> que establece el favicon de \nla página HTML:\n<pre>\n    link rel=\"---\" type=\"image/jpg\" href=\"images/favicon.jpg\"\n</pre>","answers":{"qfi5-1":{"answer_text":"icon","correct":true,"explanation":null,"type":"String"}},"points":1,"order":false,"question_comment":""}};
 
       function findCorrectAnswer(idQuestion, questionType) {
         correctIds = [];
